@@ -36,11 +36,11 @@ class UserCard extends React.Component {
                             <img src={item.avatar_url} alt={`photo of ${item.login}`}></img>
                             <div className='infoDiv'>
                                 <h2> Name: <br></br>{item.login}</h2>
-                                <h2> Location: <br></br>{item.location}</h2>
-                                <h2> Bio: <br></br>{item.bio}</h2>
+                                <h2> Location: <br></br>{item.location || 'not provided'}</h2>
+                                <h2> Bio: <br></br>{item.bio || 'not provided'}</h2>
                             </div>
                         </div>
-                        <a href={item.url}> Click here for their profile </a>
+                        <a href={item.html_url}> Click here for their profile </a>
                     </div>
                     ))
             }</>

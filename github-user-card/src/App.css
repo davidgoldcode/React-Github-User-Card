@@ -1,5 +1,7 @@
 * {
   border: 1px solid pink;
+  background-color: #F8B195;
+  color: darkslategrey;
 }
 
 .App {
@@ -8,30 +10,53 @@
 
 .gitCard {
   display: flex;
+  background-color: white;
   flex-direction: column;
   justify-content: space-between;
   margin: 2% auto;
   width: 60%;
+  border-radius: 5%;
 }
 
 img {
   width: 40%;
+  border-radius: 50%;
 }
 
 h2 {
   font-size: 1rem;
+  margin: 5% auto;
+  width: 80%;
+  background-color: white;
+}
+
+h1 {
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .infoDiv {
   width: 40%;
+  background-color: white;
   flex-flow: column;
   margin: 0 auto;
 }
 
 a {
-  width: 100%;
+  width: 80%;
+  margin: 2% auto;
+  background-color: white;
 }
 
 .imgDiv {
   display: flex;
+  background-color: white;
+  width: 80%;
+  margin: 2% auto;
+}
+
+.titleHeader {
+  background-color: transparent;
+  padding: 2%;
 }

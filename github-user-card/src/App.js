@@ -30,7 +30,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <h1 className="titleHeader">My Profile</h1>
         <MyCard props={this.state.myProfile}/>
+        <h1 className="titleHeader">My Followers</h1>
         <UserCard />
       </div>
     );

@@ -5,7 +5,6 @@ function MyCard({props}) {
     
     return (
         <div className='myCard gitCard'>
-            <h1>My Profile</h1>
             <div className='imgDiv'>
                 <img src={props.avatar_url} alt={`photo of ${props.login}`}></img>
                 <div className='infoDiv'>
