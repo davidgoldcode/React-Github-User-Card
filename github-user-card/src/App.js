@@ -31,8 +31,6 @@ class App extends React.Component {
     return (
       <div className="App">
         <MyCard props={this.state.myProfile}/>
-          <img src={logo} className="App-logo" alt="logo" />
-        <h3>My Followers:</h3>
         <UserCard />
       </div>
     );
