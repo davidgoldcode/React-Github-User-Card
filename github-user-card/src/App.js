@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import UserCard from './UserCard'
+import MyCard from './MyCard'
 import axios from 'axios';
 import './App.css';
 
@@ -8,20 +9,17 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      followers: [], 
+      myProfile: [], 
       error: '', 
     };
-    console.log('constructor is running')
   }
 
   componentDidMount() {
-    console.log('cdm is running')
     axios
-      .get('https://api.github.com/users/davidgoldcode/followers')
+      .get('https://api.github.com/users/davidgoldcode')
       .then(res => {
-        debugger
         this.setState({
-          followers: res.data,
+          myProfile: res.data,
         })
       })
       .catch(err => {
@@ -30,21 +28,12 @@ class App extends React.Component {
   }
 
   render() {
-    console.log('rendering', this.state.followers)
     return (
       <div className="App">
-        <header className="App-header">
+        <MyCard props={this.state.myProfile}/>
           <img src={logo} className="App-logo" alt="logo" />
-          <UserCard />
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <h3>My Followers:</h3>
+        <UserCard />
       </div>
     );
   }
